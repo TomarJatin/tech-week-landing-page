@@ -26,23 +26,23 @@ export function FAQSection() {
   ]
 
   return (
-    <section id="faq" className=" py-16">
-      <div className="container mx-auto w-full">
-        <h2 className="text-3xl text-center mb-8 md:text-6xl font-semibold bg-gradient-to-r from-[#FFF]/80 to-[#999]/30 bg-clip-text text-transparent">
+    <section id="faq" className="py-12 sm:py-14 md:py-16">
+      <div className="container mx-auto w-full px-4 sm:px-6">
+        <h2 className="text-2xl sm:text-3xl text-center mb-6 sm:mb-7 md:mb-8 md:text-6xl font-semibold bg-gradient-to-r from-[#FFF]/80 to-[#999]/30 bg-clip-text text-transparent">
         FAQ&apos;s
         </h2>
         
-        <Accordion type="single" collapsible className="space-y-4">
+        <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
           {faqs.map((faq, index) => (
             <AccordionItem 
               key={index} 
               value={`item-${index}`}
-              className="bg-card/30 py-3 px-10 border border-border/50 rounded-lg "
+              className="bg-card/30 py-2 sm:py-3 px-4 sm:px-6 md:px-10 border border-border/50 rounded-lg"
             >
-              <AccordionTrigger className="text-left text-white hover:text-white/80 py-4">
+              <AccordionTrigger className="text-left text-white hover:text-white/80 py-3 sm:py-4 text-sm sm:text-base">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-4">
+              <AccordionContent className="text-muted-foreground pb-3 sm:pb-4 text-sm sm:text-base">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
