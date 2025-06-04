@@ -25,11 +25,13 @@ export default function Home() {
           <ProfileSection />
           <HowItWorksSection />
           <WaitingSection />
-          <FAQSection />
+          {/* <FAQSection /> */}
         </main>
       </div>
+      <div className="bg-gradient-to-b from-transparent to-black w-full h-[200px]  -mt-[280px]" />
       <div className="bg-black">
-      <div className="w-full pb-[100px] sm:pb-[150px] md:pb-[200px] opacity-70 -mt-[50px] sm:-mt-[75px] md:-mt-[100px]">
+      
+      <div className="w-full pb-[100px] sm:pb-[150px] md:pb-[200px] opacity-70 ">
         <video src="/heizen.webm" autoPlay muted loop className="w-full h-[50vh] sm:h-[70vh] md:h-[100dvh] object-cover z-20" />
         <div className="flex flex-col items-center justify-center -mt-[80px] sm:-mt-[120px] md:-mt-[200px] px-4 sm:px-6">
         <h2 className="text-xl sm:text-2xl md:text-3xl text-center mb-6 sm:mb-7 md:mb-8 lg:text-6xl font-semibold bg-gradient-to-r from-[#FFF]/80 to-[#999]/30 bg-clip-text text-transparent">
