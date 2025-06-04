@@ -3,7 +3,6 @@ import { HeroSection } from "@/components/hero-section"
 import { ProfileSection } from "@/components/profile-section"
 import { HowItWorksSection } from "@/components/how-it-works-section"
 import { WaitingSection } from "@/components/waiting-section"
-import { FAQSection } from "@/components/faq-section"
 import Footer from "@/components/footer"
 
 export default function Home() {
