@@ -33,7 +33,7 @@ export default function Home() {
         <video src="/heizen.webm" autoPlay muted loop className="w-full h-[100dvh] object-cover z-20" />
         <div className="flex flex-col items-center justify-center -mt-[200px]">
         <h2 className="text-3xl text-center mb-8 md:text-6xl font-semibold bg-gradient-to-r from-[#FFF]/80 to-[#999]/30 bg-clip-text text-transparent">
-        You're special, and humanity <br/> is counting on you
+        You&apos;re special, and humanity <br/> is counting on you
         </h2>
         
         <button className="relative inline-flex  overflow-hidden rounded-[12px] p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">

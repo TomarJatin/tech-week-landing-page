@@ -12,16 +12,16 @@ export function ProfileSection() {
             Nijansh Verma
             </h2>
             <p className="text-muted-foreground leading-relaxed text-xl">
-            I'm Nijansh Verma, co-founder of Heizen and a builder at heart. At Heizen, we're on a mission to transform how startups bring ideas to life. We combine powerful AI agents with elite engineers to ship production-grade software not in months, but days.
+            I&apos;m Nijansh Verma, co-founder of Heizen and a builder at heart. At Heizen, we&apos;re on a mission to transform how startups bring ideas to life. We combine powerful AI agents with elite engineers to ship production-grade software not in months, but days.
 <br/>
 <br/>
 Thank you for being part of Tech for Impact: Startup Pitch Night.
 <br/>
-If we connected at the event, I'm grateful.
+If we connected at the event, I&apos;m grateful.
 <br/>
-If we haven't yet, let's fix that.
+If we haven&apos;t yet, let&apos;s fix that.
 <br/>
-Together, we’re building what’s next.
+Together, we&apos;re building what&apos;s next.
 And it starts with moments like these.
 
 #BeTheShockwave

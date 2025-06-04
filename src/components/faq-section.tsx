@@ -29,7 +29,7 @@ export function FAQSection() {
     <section id="faq" className=" py-16">
       <div className="container mx-auto w-full">
         <h2 className="text-3xl text-center mb-8 md:text-6xl font-semibold bg-gradient-to-r from-[#FFF]/80 to-[#999]/30 bg-clip-text text-transparent">
-        FAQ's
+        FAQ&apos;s
         </h2>
         
         <Accordion type="single" collapsible className="space-y-4">

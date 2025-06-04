@@ -1,19 +1,17 @@
 'use client';
 
 import Link from 'next/link';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { footerData } from '@/data/footer.data';
 import { Separator } from './ui/seperator';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import FooterSpotlightText from './Footerspotlight';
 import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Footer() {
-  const [innerWidth, setInnerWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
   const container = useRef<HTMLDivElement>(null);
   useGSAP(
@@ -30,15 +28,6 @@ export default function Footer() {
     },
     { scope: container },
   );
-
-  useEffect(() => {
-    setInnerWidth(window.innerWidth);
-
-    const handleResize = () => setInnerWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   return (
     <>

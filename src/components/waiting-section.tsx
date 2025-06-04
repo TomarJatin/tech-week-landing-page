@@ -1,13 +1,7 @@
-"use client"
 
-import { useState } from "react"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
 import { NeonGradientCard } from "./magicui/neon-gradient-card"
-import Image from "next/image"
 
 export function WaitingSection() {
-  const [inputValue, setInputValue] = useState("")
 
   return (
     <section className="py-16">

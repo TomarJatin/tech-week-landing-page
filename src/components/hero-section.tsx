@@ -1,8 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { RainbowButton } from "./magicui/rainbow-button"
 import { NeonGradientCard } from "./magicui/neon-gradient-card"
 
 export function HeroSection() {
