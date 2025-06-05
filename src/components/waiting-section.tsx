@@ -1,5 +1,3 @@
-import { NeonGradientCard } from "./magicui/neon-gradient-card";
-
 export function WaitingSection() {
   return (
     <section className="py-12 sm:py-14 md:py-16 px-4 sm:px-6">
