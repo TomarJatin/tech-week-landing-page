@@ -150,3 +150,10 @@
     @apply bg-background text-foreground;
   }
 }
+
+.gradient-bg{
+  border-radius: 24px;
+background: linear-gradient(336deg, #3B3B3B 0%, #000 101.23%);
+
+backdrop-filter: blur(10px);
+}

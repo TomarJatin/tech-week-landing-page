@@ -14,7 +14,7 @@ export function Header() {
       
       <div className="flex items-end gap-2 sm:gap-4">
       <nav className="hidden md:flex items-center ">
-          <a href="#about" className="text-sm mr-10 text-gray-300 hover:text-white transition-colors border-b-1 pb-2 px-2 rounded-[4px] border-white">
+          <a href="#about" className="text-sm mr-10 text-gray-300 hover:text-white transition-colors border-b-1 pb-2 px-2  border-white">
             About Us
           </a>
         </nav>
