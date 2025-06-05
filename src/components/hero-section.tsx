@@ -71,7 +71,7 @@ export function HeroSection() {
             </p>
 
             <div className="pt-2 sm:pt-3 md:pt-4">
-              <button onClick={() => window.open("https://cal.com/nijansh-heizen/ny-tech-week", "_blank")} className="relative inline-flex overflow-hidden rounded-[12px] p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 transition-all duration-300 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 group">
+              <a href="https://cal.com/nijansh-heizen/ny-tech-week" target="_blank"  className="relative inline-flex overflow-hidden rounded-[12px] p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 transition-all duration-300 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 group">
                 <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#F628B9_0%,#F7A907_25%,#38FF7E_50%,#4E48FE_75%,#F628B9_100%)] group-hover:animate-[spin_1s_linear_infinite] transition-all duration-300" />
                 <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-[12px] px-4 sm:px-5 md:px-8 bg-slate-950 py-2.5 sm:py-4 text-sm font-medium text-white backdrop-blur-3xl transition-all duration-300 ease-out group-hover:bg-slate-900 group-hover:text-white group-hover:shadow-inner relative overflow-hidden">
                   <span className="relative z-10 transition-all duration-300 group-hover:scale-105">
@@ -79,7 +79,7 @@ export function HeroSection() {
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
                 </span>
-              </button>
+              </a>
             </div>
           </div>
 
