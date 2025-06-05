@@ -18,19 +18,19 @@ export const footerData: FooterData = {
   links: [
     {
       name: 'Partner with Us',
-      url: '/partnership',
+      url: 'https://heizen.work/partnership',
     },
     {
       name: 'Blogs',
-      url: '/blogs',
+      url: 'https://heizen.work/blogs',
     },
     {
       name: 'Privacy Policy',
-      url: '/privacy-policy',
+      url: 'https://heizen.work/privacy-policy',
     },
     {
       name: 'Terms and Conditions',
-      url: '/terms-and-conditions',
+      url: 'https://heizen.work/terms-and-conditions',
     },
   ],
   social: [
