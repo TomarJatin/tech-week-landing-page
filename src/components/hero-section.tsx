@@ -5,7 +5,7 @@ import { NeonGradientCard } from "./magicui/neon-gradient-card";
 
 export function HeroSection() {
   const [timeLeft, setTimeLeft] = useState({ hours: 0, minutes: 0, seconds: 0 });
-  const [slotsLeft, setSlotsLeft] = useState(48);
+  const slotsLeft = 47;
 
   useEffect(() => {
     const calculateTimer = () => {
@@ -28,28 +28,13 @@ export function HeroSection() {
       setTimeLeft({ hours, minutes, seconds });
     };
 
-    const calculateSlots = () => {
-      // Slots logic: decrease from 50 to 0 at rate of 2 slots per hour
-      const startTime = new Date('2025-06-05T21:00:00.000Z'); // Start date for slots calculation
-      const now = new Date();
-      const elapsedTime = now.getTime() - startTime.getTime();
-      const elapsedHours = elapsedTime / (1000 * 60 * 60); // Convert to hours
-      
-      // Decrease 2 slots per hour
-      const slotsReduced = Math.floor(elapsedHours * 2);
-      const remainingSlots = Math.max(0, 50 - slotsReduced);
-      
-      // setSlotsLeft(remainingSlots);
-    };
 
     // Calculate immediately
     calculateTimer();
-    calculateSlots();
 
     // Update every second
     const timer = setInterval(() => {
       calculateTimer();
-      calculateSlots();
     }, 1000);
 
     return () => clearInterval(timer);
