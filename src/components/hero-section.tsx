@@ -6,6 +6,7 @@ import { NeonGradientCard } from "./magicui/neon-gradient-card";
 export function HeroSection() {
   const [timeLeft, setTimeLeft] = useState({ hours: 0, minutes: 0, seconds: 0 });
   const [slotsLeft, setSlotsLeft] = useState(0);
+  const [startTime] = useState(() => new Date()); // Capture start time when component mounts
 
   useEffect(() => {
     const calculateTimer = () => {
@@ -29,31 +30,22 @@ export function HeroSection() {
     };
 
     const calculateSlots = () => {
-      // Slots logic: increase randomly 4-5 slots each hour
-      const startTime = new Date('2024-12-01T00:00:00.000Z'); // Start date for slots calculation
+      // Slots logic: add 2 slots each hour from start time until target time
+      const targetDate = new Date('2025-06-06T21:00:00.000Z');
       const now = new Date();
-      const elapsedTime = now.getTime() - startTime.getTime();
-      const elapsedHours = Math.floor(elapsedTime / (1000 * 60 * 60)); // Convert to full hours
       
-      let totalSlots = 0;
-      
-      // For each elapsed hour, add random slots between 4-5
-      for (let hour = 0; hour < elapsedHours; hour++) {
-        // Use hour as seed for consistent randomness
-        const seed = hour + 1;
-        const random = Math.sin(seed * 12345) * 10000;
-        const randomValue = Math.abs(random - Math.floor(random));
-        
-        // Generate random number between 4-5 slots
-        const slotsToAdd = Math.floor(randomValue * 2) + 4; // Random between 4-5
-        totalSlots += slotsToAdd;
-        
-        // Stop if we reach or exceed 50
-        if (totalSlots >= 50) {
-          totalSlots = 49; // Ensure current is not 50
-          break;
-        }
+      // If current time is past target time, keep slots at 50
+      if (now.getTime() >= targetDate.getTime()) {
+        setSlotsLeft(50);
+        return;
       }
+      
+      // Calculate elapsed time since component mounted
+      const elapsedTime = now.getTime() - startTime.getTime();
+      const elapsedHours = Math.floor(elapsedTime / (1000 * 60 * 60));
+      
+      // Add 2 slots per elapsed hour, cap at 50
+      const totalSlots = Math.min(50, elapsedHours * 2);
       
       setSlotsLeft(totalSlots);
     };
