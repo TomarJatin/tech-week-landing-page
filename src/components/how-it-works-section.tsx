@@ -6,7 +6,7 @@ export function HowItWorksSection() {
     {
       title: "Book a slot",
       description: "Start with a 15-minute Engineering seed call via Calendly.com",
-      img: "/1.png",
+      img: "/3.png",
       color: "from-blue-500 to-blue-600"
     },
     {
@@ -18,7 +18,7 @@ export function HowItWorksSection() {
     {
       title: "Get Started",
       description: "The price is 5M% of hours at $120/hr, so a full week of day programming",
-      img: "/3.png",
+      img: "/1.png",
       color: "from-purple-500 to-purple-600"
     }
   ]

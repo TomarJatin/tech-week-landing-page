@@ -37,24 +37,24 @@ export const footerData: FooterData = {
     {
       name: 'Linkedin',
       icon: BsLinkedin,
-      url: 'https://www.linkedin.com/company/opengig/',
+      url: 'https://www.linkedin.com/company/heizenofficial/',
     },
     {
       name: 'Youtube',
       icon: BsYoutube,
-      url: 'http://www.youtube.com/@opengig2024',
+      url: 'https://www.youtube.com/@heizen-official',
     },
     {
       name: 'Instagram',
       icon: BsInstagram,
-      url: 'https://www.instagram.com/opengig.work',
+      url: 'https://www.instagram.com/heizen.work/',
     },
     {
       name: 'Twitter',
       icon: BsTwitterX,
-      url: 'https://x.com/opengigofficial',
+      url: 'https://www.x.com/heizenofficial',
     },
   ],
-  copyright: '© ' + new Date().getFullYear() + ' Opengig. All rights reserved.',
+  copyright: '© ' + new Date().getFullYear() + ' Heizen. All rights reserved.',
   logo: Logo,
 };
