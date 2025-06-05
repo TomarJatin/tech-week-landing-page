@@ -5,19 +5,18 @@ import { NeonGradientCard } from "./magicui/neon-gradient-card";
 
 export function HeroSection() {
   const [timeLeft, setTimeLeft] = useState({ hours: 0, minutes: 0, seconds: 0 });
-  const [slotsLeft, setSlotsLeft] = useState(50);
+  const [slotsLeft, setSlotsLeft] = useState(0);
 
   useEffect(() => {
-    const calculateTimeAndSlots = () => {
-      // Target date: June 6, 2024, 5:00 PM EDT
-      const targetDate = new Date('2024-06-06T21:00:00.000Z'); // 5 PM EDT = 9 PM UTC
+    const calculateTimer = () => {
+      // Target date: June 6, 2025, 5:00 PM EDT
+      const targetDate = new Date('2025-06-06T21:00:00.000Z'); // 5 PM EDT = 9 PM UTC
       const now = new Date();
       const timeDiff = targetDate.getTime() - now.getTime();
 
       if (timeDiff <= 0) {
         // Timer expired
         setTimeLeft({ hours: 0, minutes: 0, seconds: 0 });
-        setSlotsLeft(0);
         return;
       }
 
@@ -27,22 +26,47 @@ export function HeroSection() {
       const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
       setTimeLeft({ hours, minutes, seconds });
+    };
 
-      // Calculate slots left (starting from 50, reducing by 2 every hour)
-      // Total duration is 25 hours (50 slots / 2 per hour)
-      const totalHours = 25;
-      const hoursElapsed = totalHours - hours - (minutes / 60) - (seconds / 3600);
-      const slotsReduced = Math.floor(hoursElapsed * 2);
-      const remainingSlots = Math.max(0, 50 - slotsReduced);
+    const calculateSlots = () => {
+      // Slots logic: increase randomly 4-5 slots each hour
+      const startTime = new Date('2024-12-01T00:00:00.000Z'); // Start date for slots calculation
+      const now = new Date();
+      const elapsedTime = now.getTime() - startTime.getTime();
+      const elapsedHours = Math.floor(elapsedTime / (1000 * 60 * 60)); // Convert to full hours
       
-      setSlotsLeft(remainingSlots);
+      let totalSlots = 0;
+      
+      // For each elapsed hour, add random slots between 4-5
+      for (let hour = 0; hour < elapsedHours; hour++) {
+        // Use hour as seed for consistent randomness
+        const seed = hour + 1;
+        const random = Math.sin(seed * 12345) * 10000;
+        const randomValue = Math.abs(random - Math.floor(random));
+        
+        // Generate random number between 4-5 slots
+        const slotsToAdd = Math.floor(randomValue * 2) + 4; // Random between 4-5
+        totalSlots += slotsToAdd;
+        
+        // Stop if we reach or exceed 50
+        if (totalSlots >= 50) {
+          totalSlots = 49; // Ensure current is not 50
+          break;
+        }
+      }
+      
+      setSlotsLeft(totalSlots);
     };
 
     // Calculate immediately
-    calculateTimeAndSlots();
+    calculateTimer();
+    calculateSlots();
 
     // Update every second
-    const timer = setInterval(calculateTimeAndSlots, 1000);
+    const timer = setInterval(() => {
+      calculateTimer();
+      calculateSlots();
+    }, 1000);
 
     return () => clearInterval(timer);
   }, []);
